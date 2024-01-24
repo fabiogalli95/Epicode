@@ -1,0 +1,49 @@
+body{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+}
+.upperCase{
+    text-transform: uppercase;
+}
+.text-under-video{
+    text-align: center;
+    color: grey;
+    padding-bottom: 20px;
+}
+.background-yellow p{
+    color: #08514e;   
+    background-color: #fdfaf0;
+    border-top: #ffe5a3 2pt solid;
+    padding: 10px;
+    
+}
+.rounded{
+    border-radius: 10px;
+}
+.box-title{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.box-content{
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+.colored-blue{
+    border: #ebfafa 1pt solid;
+}
+.featured{
+    color: #b64711;
+    border-left: #fed977 1pt solid;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+a{
+    color: #107676;
+    text-decoration: underline;
+}
+ul li{
+    padding-bottom: 20px;
+}
