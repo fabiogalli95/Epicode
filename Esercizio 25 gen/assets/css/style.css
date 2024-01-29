@@ -7,42 +7,41 @@ body{
     box-sizing: border-box;
     background-image: url('../img/sfondo.png');
     background-size: contain;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+   
 }
 
 /* HEADER */
-   header{ 
+    header{ 
+        width: 50%;
     margin: 0 auto;
-    align-items: center;
+    text-align: center;
     background: linear-gradient(#009cc5, #016f8b);
     padding: 20px;
-   }
-   header img{
+    }
+    header img{
     margin: 20px;
-   }
-   header p{
+    }
+    header p{
     margin: 0;
     text-transform: uppercase;
     color:white;
-   }
-nav{
+    }
+    nav{
     margin: 0;
     text-align: center;
-   }
-header a{
+    }
+    header a{
     color:white;
     text-decoration: none;
-   }
-header a:hover{
+    }
+    header a:hover{
     color:red;
-   }
-header ul{
+    }
+    header ul{
     list-style: none;
     padding: 0;
-}
-header li:before  {
+    }
+    header li:before  {
     content: "\f101"; /* FontAwesome Unicode */
     font-family: FontAwesome;
     padding: 10px;
@@ -58,10 +57,12 @@ header li:after{
 /* MAIN */
 main{
     margin: 0 auto;
+    width: 50%;
     background-color: white;
     border: ridge 4px lightgray;
     padding: 20px;
     margin-top: 20px;
+    text-align: center;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -90,8 +91,10 @@ table tr:nth-child(even){
 }
 table{
     border-bottom: 1px solid blue;
+    border-collapse: collapse;
 }
 iframe{
+    align-items: center;
     border-radius: 25px;
 }
 /* FORM */
