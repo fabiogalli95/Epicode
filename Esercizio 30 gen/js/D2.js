@@ -4,12 +4,14 @@
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let primoNumero = 1;
+let primoNumero = 5;
 let secondoNumero = 3;
 if(primoNumero > secondoNumero){
   console.log('tra ' + primoNumero + ' e ' + secondoNumero + ' il numero più grande è ' + primoNumero);
-}else{
+}else if(secondoNumero > primoNumero){
   console.log('tra ' + primoNumero + ' e ' + secondoNumero + ' il numero più grande è ' + secondoNumero);
+}else{
+  console.log(primoNumero + ' e ' + secondoNumero + ' sono uguali');
 }
 
 /* ESERCIZIO 2
@@ -42,10 +44,10 @@ if (numeroDivisibilePerCinque % 5 === 0){
 
 let terzoNumero = 4;
 let quartoNumero = 12;
-if (terzoNumero === 8 || quartoNumero === 8){
-  console.log('uno dei due è 8');
-}else if((terzoNumero + quartoNumero === 8) || (terzoNumero - quartoNumero === 8) || (quartoNumero - terzoNumero === 8)){
-  console.log('addizione/sottrazione da 8');
+if (terzoNumero === 8 || quartoNumero === 8 || terzoNumero + quartoNumero === 8 || terzoNumero - quartoNumero === 8 || quartoNumero - terzoNumero === 8){
+  console.log('condizione verificata');
+}else{
+  console.log('condizione non verificata');
 }
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -55,7 +57,7 @@ if (terzoNumero === 8 || quartoNumero === 8){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let totalShoppingCart = 51;
-if(totalShoppingCart > 50){
+if(totalShoppingCart >= 50){
   console.log('spedizione è gratuita quindi utente spende ' + totalShoppingCart);
 }else{
   console.log('spedizione non è gratuita quindi utente spende ' + (totalShoppingCart+10));
@@ -71,7 +73,7 @@ if(totalShoppingCart > 50){
 const scontoBlackFriday = 0.20;
 
 let prezzoScontato = totalShoppingCart - totalShoppingCart * scontoBlackFriday;
-if(prezzoScontato > 50){
+if(prezzoScontato >= 50){
   console.log('con sconto spedizione è gratuita quindi utente spende ' + prezzoScontato);
 }else{
   console.log('con sconto spedizione non è gratuita quindi utente spende ' + (prezzoScontato+10));
@@ -86,9 +88,13 @@ if(prezzoScontato > 50){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-/* let ordinaNumero = [x,y,z];
-console.log(ordinaNumero.sort().reverse())
- */
+/* let x = 12;
+let y = 3;
+let z = 4;
+let ordinaNumero = [x,y,z];
+console.log(ordinaNumero.sort().reverse()); */
+
+// In array per confrontare due numeri devono essere lo stesso numero di cifre
 
 let num1 = 15;
 let num2 = 7;
@@ -132,7 +138,7 @@ if (num1 > num2) {
 }
 
 
-console.log("I numeri dal più alto al più basso sono" + highest + ", " + middle + ", " + lowest);
+console.log("I numeri dal più alto al più basso sono " + highest + ", " + middle + ", " + lowest);
 
 
 /* ESERCIZIO 8
@@ -219,16 +225,8 @@ console.log(me);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const arrayVuoto = [];
-arrayVuoto.push(1);
-arrayVuoto.push(2);
-arrayVuoto.push(3);
-arrayVuoto.push(4);
-arrayVuoto.push(5);
-arrayVuoto.push(6);
-arrayVuoto.push(7);
-arrayVuoto.push(8);
-arrayVuoto.push(9);
-arrayVuoto.push(10);
+arrayVuoto.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
 
 console.log(arrayVuoto);
 
