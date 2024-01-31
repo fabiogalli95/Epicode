@@ -105,14 +105,14 @@ const starWarsCharacters = [
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
 
-let charactersNames = [];
+const charactersNames = [];
 
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "charactersNames" creato precedentemente.
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
-for (let i=0; i< starWarsCharacters.length; i++){
+for (let i = 0; i < starWarsCharacters.length; i++) {
   charactersNames.push(starWarsCharacters[i].name);
 }
 console.log(charactersNames);
@@ -121,10 +121,10 @@ console.log(charactersNames);
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
 
-let femaleCharacters = [];
+const femaleCharacters = [];
 
-for (let i=0; i< starWarsCharacters.length; i++){
-  if(starWarsCharacters[i].gender === 'female'){
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === 'female') {
     femaleCharacters.push(starWarsCharacters[i]);
   }
 }
@@ -136,11 +136,11 @@ console.log(femaleCharacters);
 */
 
 const eyeColor = {
-  blue : [],
-  yellow : [],
+  blue: [],
+  yellow: [],
   brown: [],
-  red : [],
-  blue_gray : [],
+  red: [],
+  'blue-gray': [],
 };
 
 
@@ -149,20 +149,25 @@ const eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-for(let i =0; i< starWarsCharacters.length; i++){
- 
-  switch(starWarsCharacters[i].eye_color){
-    case 'blue': eyeColor.blue.push(starWarsCharacters[i]);
-    break;
-    case 'blue-gray' : eyeColor.blue_gray.push(starWarsCharacters[i]);
-    break;
-    case 'yellow': eyeColor.yellow.push(starWarsCharacters[i]);
-    break;
-    case 'brown' : eyeColor.brown.push(starWarsCharacters[i]);
-    break;
-    case 'red' : eyeColor.red.push(starWarsCharacters[i]);
-    break;
-    
+for (let i = 0; i < starWarsCharacters.length; i++) {
+
+  switch (starWarsCharacters[i].eye_color) {
+    case 'blue':
+      eyeColor.blue.push(starWarsCharacters[i]);
+      break;
+    case 'blue-gray':
+      eyeColor['blue-gray'].push(starWarsCharacters[i]);
+      break;
+    case 'yellow':
+      eyeColor.yellow.push(starWarsCharacters[i]);
+      break;
+    case 'brown':
+      eyeColor.brown.push(starWarsCharacters[i]);
+      break;
+    case 'red':
+      eyeColor.red.push(starWarsCharacters[i]);
+      break;
+
   }
 }
 console.log(eyeColor);
@@ -173,9 +178,9 @@ console.log(eyeColor);
 
 let crewMass = 0;
 let conta = 0;
-while(conta < starWarsCharacters.length){
+while (conta < starWarsCharacters.length) {
   crewMass += starWarsCharacters[conta].mass;
-  conta ++;
+  conta++;
 }
 console.log(crewMass);
 /* ESERCIZIO 7
@@ -191,23 +196,23 @@ console.log(crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-if(crewMass <= 500){
+if (crewMass <= 500) {
   console.log('Ship is under loaded');
-}else if(crewMass > 500 && crewMass <= 700){
+} else if (crewMass <= 700) {
   console.log('Ship is half loaded');
-}else if(crewMass > 700 && crewMass <= 900){
+} else if (crewMass <= 900) {
   console.log('Warning: Load is over 700');
-}else if(crewMass > 900 && crewMass <= 1000){
+} else if (crewMass <= 1000) {
   console.log('Critical Load: Over 900');
-}else{
+} else {
   console.log('DANGER! OVERLOAD ALERT: escape from ship now!');
 }
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
-for (let i= 0; i<starWarsCharacters.length; i++){
-  if(starWarsCharacters[i].gender === 'n/a'){
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === 'n/a') {
     starWarsCharacters[i].gender = 'robot';
   }
 }
@@ -218,12 +223,12 @@ console.log(starWarsCharacters);
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 console.log(charactersNames.length);
-for (let i = 0; i < charactersNames.length; i++){
-  for( let j = 0; j< femaleCharacters.length; j++){
-    
-    if(charactersNames[i] === femaleCharacters[j].name){
-      charactersNames = charactersNames.filter(item => item !== charactersNames[i]);
-      
+for (let i = 0; i < charactersNames.length; i++) {
+  for (let j = 0; j < femaleCharacters.length; j++) {
+
+    if (charactersNames[i] === femaleCharacters[j].name) {
+      //charactersNames = charactersNames.filter(item => item !== charactersNames[i]);
+      charactersNames.splice(i, 1);
     }
   }
 }
@@ -231,12 +236,18 @@ console.log(charactersNames.length);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
-function getRandomInteger(min, max){
+
+//soluzione con funzione
+/* function getRandomInteger(min, max) {
 
   min = Math.ceil(min);
-  max = Math.floor(max);  
-  
+  max = Math.floor(max);
+
   return Math.floor(Math.random() * (max - min)) + min;
 }
 let indice = getRandomInteger(0, starWarsCharacters.length);
-console.log('il mio personaggio preferito è: ' + starWarsCharacters[indice].name + '; anno di nascita: ' + starWarsCharacters[indice].birth_year + '; genere: ' + starWarsCharacters[indice].gender);
+console.log('il mio personaggio preferito è: ' + starWarsCharacters[indice].name + '; anno di nascita: ' + starWarsCharacters[indice].birth_year + '; genere: ' + starWarsCharacters[indice].gender); */
+
+// soluzione del prof
+const indiceRandom = Math.floor(Math.random() * starWarsCharacters.length);
+console.log('il mio personaggio preferito è: ' + starWarsCharacters[indiceRandom].name + '; anno di nascita: ' + starWarsCharacters[indiceRandom].birth_year + '; genere: ' + starWarsCharacters[indiceRandom].gender);
