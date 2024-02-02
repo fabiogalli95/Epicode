@@ -18,11 +18,11 @@ console.log(area(5, 3))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const crazySum = (l1, l2) => {
-    if(l1 === l2){
-        return (l1 + l2) * 3;
+const crazySum = (n1, n2) => {
+    if(n1 === n2){
+        return (n1 + n2) * 3;
     }else{
-        return l1 + l2;
+        return n1 + n2;
     }
 }
 
@@ -35,11 +35,11 @@ console.log(crazySum(3,3));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const crazyDiff = (l1) => {
-    if (Math.abs(l1 - 19) > 19){
-        return Math.abs(l1 - 19) * 3;
+const crazyDiff = (n1) => {
+    if (n1 > 19){
+        return Math.abs(n1 - 19) * 3;
     }else{
-        return Math.abs(l1 - 19);
+        return Math.abs(n1 - 19);
     }
 }
 console.log(crazyDiff(40));
@@ -70,13 +70,16 @@ console.log(boundary(201))
 const epify = (frase) => {
     
     if(frase.search('EPICODE') === -1){
-        return frase = 'EPICODE ' + frase;
+        return 'EPICODE ' + frase;
     }else{
         return frase;
     }
     
 }
-console.log(epify('SONO FABIO'))
+
+//alternativa stringa.startsWith('EPICODE');
+// alternativa stringa.indexOf('EPICODE') ===0 ;
+console.log(epify('Ciao sono'))
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
@@ -99,7 +102,7 @@ console.log('il valore passato è multiplo di 3 o 7? ' + check3and7(80));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const reverseString = (epicode) => { return epicode = epicode.split('').reverse().join('')}
+const reverseString = (epicode) => { return  epicode.split('').reverse().join('')}
 console.log(reverseString('EPICODE'));
 
 /* ESERCIZIO 8
