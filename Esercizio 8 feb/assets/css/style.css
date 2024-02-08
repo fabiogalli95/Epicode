@@ -1,0 +1,54 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    background-color: #131334;
+    color: #ebebeb;
+}
+
+h1{
+    text-align: center;
+}
+.container {
+    max-width: 992px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.divNumeri{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.divNumeri h3 {
+    text-align: center;
+    font-size: 26px;
+    margin:0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.estratto{
+    background-color: green;
+}
+
+#numeroEstratto{
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+
+#estraiNumero{
+    margin-bottom: 20px;
+    font-size: 20px;
+    background-color: #ebebeb;
+    color: #131334;
+}
