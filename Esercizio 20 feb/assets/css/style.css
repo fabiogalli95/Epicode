@@ -58,14 +58,17 @@ header {
   background-color:rgba(188, 186, 186, 0.8);
   color:#3f6bca;
   border-radius: 5px;
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   border: 1px solid white;
   padding: 0;
   cursor: pointer;
   font-size: 20px;
  }
-
+ .iconsDiv {
+  height: 50px;
+  width: 50px;
+ }
 
 
 @media screen and (min-width: 800px) {
@@ -163,7 +166,7 @@ h1 {
   margin-bottom: 0.5em;
   
 }
-#divTemplate{
+/* #divTemplate{
   background-image: url('../img/underline.svg');
   background-repeat: no-repeat;
   background-position: 0px 55px;
@@ -171,7 +174,17 @@ h1 {
   display: inline-block;
   background-size: contain;
 }
-
+ */
+ h1 span{
+  position: relative;
+ }
+ span img{
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  left: 0;
+  opacity: 0.6;
+ }
 p,
 address,
 ul,
@@ -463,13 +476,13 @@ footer a {
     top:80px;
     right: 0;
     bottom: 0;
-   z-index: 2;
+   height: 50px;
   }
   #iconPlus{
     top:20px;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    height: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
