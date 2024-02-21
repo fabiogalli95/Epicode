@@ -1,0 +1,271 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+/* HEADER */
+nav{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 90%;
+   margin: 0 auto;
+   background-color: #fff7e3;
+   border-radius: 100px;
+   padding: 20px;
+}
+.headerNavBig img{
+    width: 60px;
+    padding: 10px;
+}
+.headerNavBig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    margin: 20px;
+    height: 120px;
+   
+    font-size: 40px;
+    
+}
+
+.headerNavLittle{
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+.yellow{
+    background-color: #fedf7e;
+    border-radius: 60px;
+    color:#722004;
+    font-weight: bold;
+
+}
+/* Main */
+h1{
+    color: #722004;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 800;
+    margin-top: 40px;
+}
+h3,p{
+    margin: 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff7e3;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 40px;
+    margin-top: 40px;
+}
+.card img{
+    width: 100%;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.bioHoney{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.bioHoney div{
+    margin: 20px;
+    color: #722004;
+}
+.buttonCart{
+    width: 200px;
+    border: none;
+    background-color: #fedf7e;
+    color: #722004;
+    font-weight: 700;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+article h2, article h3, article p{
+    color: #722004;
+}
+article h3, article p{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+article div{
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff7e3;
+    border-radius: 40px;
+    padding-bottom: 40px;
+}
+article div img{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:768px) {
+    nav{
+        flex-wrap: nowrap;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .headerNavBig img{
+        width: 40px;
+    }
+    .headerNavBig{
+        font-size: 20px;
+        gap: 0;
+        margin: 0;
+        order: 3;
+        height: 90px;
+        width: 50%;
+    }
+    .headerNavLittle{
+        font-size: 16px;
+        margin: 4px;
+    }
+    
+    #facilities{
+        order: 4;
+    }
+    #ourHoney{
+        order: 1;
+    }
+    #contacts{
+        order: 5;
+    }
+    #traceHoney{
+        order: 2;
+    }
+    
+    article h2{
+        text-align: left;
+        margin-left: 20px;
+        font-weight: 800;
+    } 
+    
+    .card{
+        width: 45%;
+        
+    }
+    .card:nth-child(-n +1){
+        display: none;
+      }
+   .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+   article div{
+    width: 96%;
+   }
+   
+}
+@media screen and (min-width:992px) {
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        left: 0;
+        width: 30%;
+        height: 100vh;
+        top: 0;
+    }
+    .box{
+        width: 70%;
+        margin-left: 30%;
+    }
+    #facilities{
+        order: 4;
+    }
+    #ourHoney{
+        order: 2;
+    }
+    #contacts{
+        order: 5;
+    }
+    #traceHoney{
+        order: 3;
+    }
+    .headerNavBig{
+        order:1;
+    }
+    .headerNavLittle, .headerNavBig{
+        gap: 0;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 200px;
+        padding: 0;
+    }
+    .card{
+       width: 30%;
+    }
+    .card:nth-child(-n + 2){
+      display: none;
+    }
+    .buttonCart{
+        width: 150px;
+        font-size: 16px;
+    }
+    .bioHoney div{
+        margin: 10px;
+    }
+    .bioHoney h3{
+        font-size: 16px;
+    }
+    .bioHoney p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+.card:nth-child(-n + 1){
+  display: block;
+}
+.card{
+    width: 20%;
+}
+}
+
+@media screen and (min-width:1440px) {
+    .card:nth-child(n){
+        display: block;
+      }
+      .card{
+          width: 15%;
+      }
+}
