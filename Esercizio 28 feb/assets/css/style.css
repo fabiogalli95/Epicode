@@ -1,0 +1,99 @@
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 10px;
+  font-size: 14px;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+}
+
+#approfondisci {
+  background-color: #0e6cff;
+}
+
+#accedi {
+  background-color: #ff8700;
+}
+
+#contattaci {
+  background-color: #4caf50;
+}
+
+li {
+  list-style: none;
+  color: #f4f4f4;
+  font-size: 10px;
+}
+
+header, #titoloContainer {
+  background-color: #640fe5;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 1;
+  width: 300px;
+}
+
+p {
+  color: #f4f4f4;
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+img {
+  border-radius: 5px;
+  border: 1px solid #f4f4f4;
+}
+
+#imgMoved {
+  position: relative;
+  top: 50px;
+}
+
+#imgsContainer {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.fade-in-element-down {
+  animation: fadeInDown 1s ease-in-out forwards;
+}
+
+.fade-in-element-up {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

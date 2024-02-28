@@ -1,0 +1,22 @@
+$border-radius : 5px;
+
+button{
+    padding: 10px;
+    font-size: 14px;
+    color: $coloreTesto;
+    border: none;
+    border-radius: $border-radius;
+}
+
+
+#approfondisci{
+    background-color: $backgroundApprondisci;
+
+}
+#accedi{
+    background-color: $backgroundAccedi;
+}
+
+#contattaci{
+    background-color: $backgroundContattaci;
+}
