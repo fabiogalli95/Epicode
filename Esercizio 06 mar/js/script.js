@@ -63,27 +63,27 @@ window.onload = function(){
 }
 
 const init = () => {
-       let response = fetch('https://striveschool-api.herokuapp.com/books')
-            .then(response => response.json())
-            .then(data => {
-                const bookListContainer = document.getElementById('bookList');
-                data.forEach(book => {
-                    const card = createBookCard(book);
-                    bookListContainer.appendChild(card);
-                });
-                return data;
-            })
-            .catch(error => console.error('Errore nella richiesta:', error));
-            
-        
-     
+
+        loadBooks()
 
         const storedCartItems = localStorage.getItem('cartItems');
         if (storedCartItems) {
             const cartList = document.getElementById('cartList');
             cartList.innerHTML = storedCartItems;
-        }
-
-      
+        }      
         
     };
+
+    const loadBooks = async () => {
+        await fetch('https://striveschool-api.herokuapp.com/books')
+        .then(response => response.json())
+        .then(data => {
+            const bookListContainer = document.getElementById('bookList');
+            data.forEach(book => {
+                const card = createBookCard(book);
+                bookListContainer.appendChild(card);
+            });
+            return data;
+        })
+        .catch(error => console.error('Errore nella richiesta:', error));
+    }
