@@ -1,13 +1,3 @@
-function escapeSpecialCharacters(input) {
-    const replacements = {
-        "'": '&#39;',
-        // Add more replacements if needed
-    };
-
-    // Use a regular expression to match the special characters and replace them
-    return input.replace(/[''']/g, match => replacements[match]);
-}
-
 const createBookCard = (book) => {
     const cardDiv = document.createElement('div');
     cardDiv.className = 'col-md-3 mb-4';
